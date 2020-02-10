@@ -1,0 +1,145 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+.print {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.app-body {
+  position: fixed;
+  top: 50px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 1239px;
+  height: 732px;
+  background-color: #1C1E23;
+}
+.app-body .app-toolbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 34px;
+  border-bottom: 1px solid #313641;
+  background-color: #282C35;
+}
+.app-body .app-toolbar a {
+  position: relative;
+  float: left;
+  display: block;
+  margin: 0 1px 0 0;
+  padding: 0 14px;
+  height: 33px;
+  line-height: 33px;
+  border-radius: 4px 4px 0 0;
+  color: #A9AAAE;
+}
+.app-body .app-toolbar a:focus,
+.app-body .app-toolbar a:hover {
+  text-decoration: none;
+  background-color: #313641;
+}
+.app-body .app-toolbar a:first-child:focus,
+.app-body .app-toolbar a:last-child:focus,
+.app-body .app-toolbar a:first-child:hover,
+.app-body .app-toolbar a:last-child:hover {
+  text-decoration: none;
+  background-color: #2C364A;
+}
+.app-body .app-toolbar a:last-child:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 4px;
+  left: -1px;
+  bottom: 4px;
+  width: 1px;
+  background-color: #313641;
+}
+.app-body .app-toolbar a.active {
+  padding: 0 12px 0 24px;
+  background-color: #313641;
+}
+.app-body .app-toolbar a .tab-label {
+  font-weight: bold;
+  color: #ECEDEE;
+}
+.app-body .app-toolbar a .fa-times {
+  margin-left: 6px;
+}
+.app-body .app-content {
+  position: absolute;
+  top: 34px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.app-body .app-content .content-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 48px;
+  background-color: #313641;
+}
+.app-body .app-content .content-top .content-items {
+  position: absolute;
+  height: 48px;
+}
+.app-body .app-content .content-top .content-items.left {
+  left: 0;
+}
+.app-body .app-content .content-top .content-items.center {
+  left: 50%;
+  margin-left: -200px;
+  width: 400px;
+}
+.app-body .app-content .content-top .content-items.right {
+  right: 0;
+}
+.app-body .app-content .content-top .content-items .item {
+  float: left;
+  height: 100%;
+}
+.app-body .app-content .content-top .content-items .item a {
+  display: block;
+  height: 100%;
+  padding: 0 20px;
+  color: #A9AAAE;
+}
+.app-body .app-content .content-top .content-items .item a:focus,
+.app-body .app-content .content-top .content-items .item a:hover {
+  background-color: #282C35;
+  text-decoration: none;
+}
+.app-body .app-content .content-top .content-items .item a span {
+  display: block;
+}
+.app-body .app-content .content-top .content-items .item a .item-small {
+  padding-top: 3px;
+  font-size: 11px;
+}
+.app-body .app-content .content-top .content-items .item a .item-label {
+  padding-top: 2px;
+  font-weight: bold;
+  color: #ECEDEE;
+}
+.app-body .app-content .content-middle {
+  position: absolute;
+  top: 48px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}

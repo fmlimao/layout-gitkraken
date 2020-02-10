@@ -1,0 +1,195 @@
+@app-body-bg: #1C1E23;
+@top-toolbar-bg: #282C35;
+@top-toolbar-tab-active: #313641;
+@top-toolbar-tab-active-2: #2C364A;
+@top-toolbar-color: #A9AAAE;
+@top-toolbar-color-2: #ECEDEE;
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.print {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.app-body {
+    position: fixed;
+    top: 50px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    width: 1239px;
+    height: 732px;
+
+    background-color: @app-body-bg;
+
+    .app-toolbar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 34px;
+        border-bottom: 1px solid @top-toolbar-tab-active;
+
+        background-color: @top-toolbar-bg;
+
+        a {
+            position: relative;
+            float: left;
+            display: block;
+            margin: 0 1px 0 0;
+            padding: 0 14px;
+            height: 33px;
+            line-height: 33px;
+            border-radius: 4px 4px 0 0;
+            // transition: all 200ms ease;
+            color: @top-toolbar-color;
+
+            &:focus,
+            &:hover {
+                text-decoration: none;
+                background-color: @top-toolbar-tab-active;
+            }
+
+            &:first-child,
+            &:last-child {
+
+                &:focus,
+                &:hover {
+                    text-decoration: none;
+                    background-color: @top-toolbar-tab-active-2;
+                }
+            }
+
+            &:last-child {
+                &:after {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    top: 4px;
+                    left: -1px;
+                    bottom: 4px;
+                    width: 1px;
+                    background-color: @top-toolbar-tab-active;
+                }
+            }
+
+            &.active {
+                padding: 0 12px 0 24px;
+                background-color: @top-toolbar-tab-active;
+            }
+
+            .tab-label {
+                font-weight: bold;
+                color: @top-toolbar-color-2;
+            }
+
+            .fa-times {
+                margin-left: 6px;
+            }
+        }
+    }
+
+    .app-content {
+        position: absolute;
+        top: 34px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        // background-color: green;
+        // background-color: red;
+
+        .content-top {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 48px;
+
+            // background-color: red;
+            background-color: @top-toolbar-tab-active;
+
+            .content-items {
+                position: absolute;
+                // background-color: green;
+                // width: 50px;
+                height: 48px;
+
+                &.left {
+                    left: 0;
+                }
+
+                &.center {
+                    left: 50%;
+                    margin-left: -200px;
+                    width: 400px;
+                }
+
+                &.right {
+                    right: 0;
+                }
+
+                .item {
+                    float: left;
+                    height: 100%;
+
+                    a {
+                        display: block;
+                        height: 100%;
+                        padding: 0 20px;
+                        color: @top-toolbar-color;
+
+                        // background-color: yellow;
+
+                        &:focus,
+                        &:hover {
+                            background-color: @top-toolbar-bg;
+                            text-decoration: none;
+                        }
+
+                        span {
+                            display: block;
+                        }
+
+                        .item-small {
+                            padding-top: 3px;
+                            font-size: 11px;
+                        }
+
+                        .item-label {
+                            padding-top: 2px;
+                            font-weight: bold;
+                            color: @top-toolbar-color-2;
+                        }
+                    }
+                }
+            }
+        }
+
+        .content-middle {
+            position: absolute;
+            top: 48px;
+            left: 0;
+            right: 0;
+            bottom: 0;
+
+            // background-color: green;
+        }
+    }
+}
